@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
- 
+import './styles.css';
+
 export default function Form() {
 
     const [desc, setDesc] = useState("");
@@ -13,7 +14,7 @@ export default function Form() {
         setDescriptions(descriptions.concat(desc));
         setAmounts(amounts.concat(Number(amount)));
     }
- 
+
     function getBalance() {
         let balance = 0;
         for (let i = 0; i < amounts.length; i++) {
@@ -34,39 +35,43 @@ export default function Form() {
         return expenses
     }
 
-    function resetList(){
+    function resetList() {
         setAmounts([]);
         setDescriptions([]);
     }
- 
+
     return (
-        <div>
+        <div className="Container">
             <h1>Expense Tracker App</h1>
-            <h3><span>Balance</span><span>${-getBalance() + getExpenses()}</span></h3>
-            <h3><span>Expense</span><span>${-getExpenses()}</span></h3>
+            <hr />
+            <div className="Results">
+                <p><strong><span>Balance</span></strong><br /><hr /><span>${-getBalance() + getExpenses()}</span></p>
+                <p><strong><span>Expense</span></strong><br /><hr /><span>${-getExpenses()}</span></p>
+            </div>
+            <hr />
+            <p>Transactions List</p>
+            <hr />
+            <ul>
+                {descriptions.map((des, id) => {
+                    return <div>
+                        <li key={id}>
+                            <span>{des}</span>
+                            <span>{amounts[id]}</span>
+                        </li>
+                        <hr />
+                    </div>
+                })}
+            </ul>
             <form name="expenseForm" onSubmit={handleSubmit}>
                 <label>
                     Enter the Description
-                    <br />
-                    <input type="text" onChange={(e) => { setDesc(e.target.value) }} placeholder="e.g. Eggs" required></input>
-                </label>
-                <br />
-                <label>Enter the amount
-                    <br />
-                    <input type="number" onChange={(e) => setAmount(e.target.value)} placeholder="0" required></input>
-                </label>
-                <br />
-                <input type="submit" value="Add Transaction"></input>
+                    </label>
+                <input type="text" onChange={(e) => { setDesc(e.target.value) }} placeholder="e.g. Eggs" required></input>
+                <label>Enter the amount</label>
+                <input type="number" onChange={(e) => setAmount(e.target.value)} placeholder="0" required></input>
+                <input type="submit" value="Add Transaction" className="Buttons"></input>
+                <input type="button" value="Reset List" className="Buttons" onClick={() => resetList()}></input>
             </form>
-            <button onClick={()=>resetList()}>Reset List</button>
-             <ul>
-                {descriptions.map((des, id) => {
-                    return <li key={id}>
-                        <span>{des}</span>
-                        <span>{amounts[id]}</span>
-                    </li>
-                })}
-            </ul>
         </div>
     )
 }

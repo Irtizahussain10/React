@@ -1,0 +1,100 @@
+/* Styling the container */
+
+.Container {
+    background-color: rgba(0, 0, 0, 0.733);
+    color: white;
+    margin: auto;
+    width: 350px;
+    margin-top: 50px;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+/* Styling the heading */
+
+h1 {
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 15px;
+}
+
+/* Displaying the budgets */
+
+.Results {
+    display: flex;
+    justify-content: space-evenly;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 30px;
+}
+
+p {
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    padding: 6px;
+}
+
+/* Styling the list */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+}
+
+li>span {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Styling the Form */
+
+form {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 5px;
+}
+
+form>label {
+    letter-spacing: 2px;
+    line-height: 30px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    text-align: center;
+}
+
+form>input {
+    width: 200px;
+    border: 1px solid black;
+    height: 20px;
+    border-radius: 3px;
+    text-align: center;
+    font: caption;
+    margin: 3px;
+
+}
+
+form>input:focus,
+form>input:hover {
+    font-weight: bolder;
+}
+
+.Buttons {
+    border: 1px solid white;
+    text-align: center;
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    width: inherit;
+    height: inherit;
+}
