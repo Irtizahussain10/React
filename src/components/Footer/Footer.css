@@ -1,0 +1,46 @@
+.Footer {
+    height: 74px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    line-height: 74px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: monospace;
+    animation: footer;
+    animation-duration: 700ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes footer {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.text {
+    animation: text;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes text {
+    from {
+        font-size: 0;
+        opacity: 0;
+    }
+
+    to {
+        font-size: 20px;
+        opacity: 1;
+    }
+}

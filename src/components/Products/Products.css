@@ -1,0 +1,49 @@
+.Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 5px;
+    width: 90%;
+    margin: auto;
+}
+
+img {
+    height: 350px;
+    margin: 4%;
+    opacity: 0.7;
+    animation: image;
+    animation-duration: 2s;
+}
+
+@keyframes image {
+    from {
+        transform: rotate(25deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+p {
+    text-align: center;
+    font-family: cursive;
+    text-shadow: 2px 2px silver;
+    color: black;
+    animation: image;
+    animation-duration: 2s;
+}
+
+.Container>div {
+    margin: auto;
+    width: 340px;
+    padding: 10px;
+    border: 2px black;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px silver;
+    animation: image;
+    animation-duration: 2s;
+}
+
+.Item {
+    text-decoration: none;
+}

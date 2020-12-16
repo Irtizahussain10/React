@@ -1,0 +1,53 @@
+.NavBar {
+    overflow: hidden;
+    line-height: 40px;
+    font-size: 20px;
+    border: 2px solid white;
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 3px;
+    background-color: black;
+    font-family: monospace;
+    animation: navbar;
+    animation-duration: 700ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes navbar {
+    from {
+        opacity: 0;
+        margin-left: 50%;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+.Link {
+    overflow: hidden;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    animation: Link;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes Link {
+    from {
+        opacity: 0;
+        font-size: 0;
+    }
+
+    to {
+        opacity: 1;
+        font-size: 20px;
+    }
+}
+
+.Link:hover {
+    margin: 15px;
+    color: thistle;
+}
